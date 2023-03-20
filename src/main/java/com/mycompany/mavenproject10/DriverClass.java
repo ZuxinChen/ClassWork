@@ -19,8 +19,12 @@ public class DriverClass {
         lst.append(34);
         lst.append(10);
         lst.append(109);  
-         lst.append(34);
+        lst.append(34);
         lst.append(10);
+        System.out.println(lst);
+        System.out.println(lst.size());
+        
+        lst.remove(34);
         System.out.println(lst);
         System.out.println(lst.size());
     }

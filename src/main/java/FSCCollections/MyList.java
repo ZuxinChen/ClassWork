@@ -16,7 +16,27 @@ public class MyList {
        elements[size]=e;
        size++;
     }
-    
+    public void prepend(int e){
+        int[] newArr = new int[size++];
+        newArr[0]= e;
+        for(int i = 1; i<size; i++){
+            newArr[i]=elements[i-1];
+        }
+         elements = newArr;
+    }
+    public void intsert(int index, int e){
+        int[] newArr = new int[size++];
+        int j=0;
+        for(int i = 0; i<size;i++){
+            if(i==index){  
+                newArr[i]= e;
+                j++;
+            } 
+            newArr[i]=elements[j];
+            j++;
+        }
+        elements = newArr;
+    }
     private void checkCapa(){
         int newSize= elements.length*2;
         int[] newArr= new int[newSize];
@@ -34,6 +54,10 @@ public class MyList {
     public void remove(int e){
        if(findElement(e)!=-1){
            
+           for(int i = findElement(e); i< size; i++){
+               elements[i]=elements[i+1];
+           }
+           size--;
        }
      
     }
