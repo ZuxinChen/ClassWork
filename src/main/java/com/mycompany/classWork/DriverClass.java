@@ -1,5 +1,5 @@
 
-package com.mycompany.mavenproject10;
+package com.mycompany.classWork;
 
 import FSCCollections.*;
 
